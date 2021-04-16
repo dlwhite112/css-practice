@@ -1,0 +1,132 @@
+body{
+    height: 900vh;
+}
+#top-section{
+    position: relative;
+    height: 100vh;
+}
+header{
+    display: flex;
+    position: relative;
+    justify-content: space-evenly;
+    height: 80px;
+    /* background-color: violet; */
+    align-items: center;
+    background: white;
+    /* position: -webkit-sticky;
+    position: sticky;
+    top: 20px; */
+}   
+button{
+    background: rgba(40,134,62,1);
+    color:white;
+    height: 48px;
+    font-size: 18px;
+  
+}
+.banner{
+    display: flex;
+    margin-left: auto;
+    margin-top: 80px;
+    margin-right: auto;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 1200px;
+    height: 300px;
+    /* background: teal; */
+}
+.image-1-container{
+    margin-right: 40px;
+}
+.banner-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+}
+#banner-body{
+    margin-bottom: 50px;
+    font-family: "Source Sans Pro";
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+}
+#attn-grabber{
+    margin-left: 30px;
+    margin-right: 30px;
+    margin: 0;
+    font-weight: 800;
+    line-height: 45px;
+    font-size: 40px;
+}
+#testimonial-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.partners-container{
+    /* background-color: rgb(70, 131, 180); */
+    position: absolute;
+    top: 75vh;
+    height: 306px;
+    display: flex;
+    flex-direction: column;
+}
+.partners-heading{
+    /* color:white; */
+    font-size: 30px;
+    color: rgb(78, 77, 77);
+}
+.partners-logos{
+    margin: 0;
+}
+.top-section-ending{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#top-section-end-text{
+    position: absolute;
+    font-size: 40px;
+    width: 1000px;
+    top: 100vh;
+}
+#middle-section{
+    position: relative;
+   /* height: 100vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.detail-cards{
+    display: flex;
+    position: absolute;
+    top: 25vh;
+    height: fit-content;
+    
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    width: 1100px;
+    margin-left: auto;
+    margin-right: auto; 
+}
+figcaption{
+    padding: 80px;
+}
+
+.card-img-left{
+    float: left;
+}
+.card-img-right{
+    float: right;
+}
+.compare-plans{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
