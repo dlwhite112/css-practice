@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+    margin: 0;
+}
+
+.text-annotation {
+  line-height: 1;
+  white-space: pre;
+  position: fixed;
+  overflow: hidden;
+  transform: translateZ(0); /* Optimization */
+}
+    </style>
+</head>
+<body>
+    <div id='text-annotation' class='text-annotation'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</BR>Dolore magna aliquaSemper viverra nam libero justoHendrerit gravida rutrum quisque non.</BR>Lacus laoreet non curabitur gravida.</BR>Faucibus interdum posuere lorem ipsum dolor sit amet consectetur.</BR>Aliquam faucibus purus in massa tempor.</BR>Auctor urna nunc id cursus metus.</BR>Velit egestas dui id ornare arcu odio ut.</BR>Et tortor consequat id porta nibh venenatis cras.</BR>Id diam maecenas ultricies mi eget mauris pharetra.</BR>Fermentum odio eu feugiat pretium nibh ipsum consequat.</BR>Tincidunt nunc pulvinar sapien et ligula.</BR>Semper quis lectus nulla at volutpat diam.</BR>Elementum tempus egestas sed sed risus.
+<script>
+    const MAX_ZOOM_OUT = 0.3;
+const FONT_SIZE = 30;
+const pos = { x: 0, y: 0}
+const textElement = document.getElementById('text-annotation');
+
+let zoom = 1;
+
+function renderText() {
+  const preciseFontSize = FONT_SIZE * zoom;  // Desired font size
+  const roundedSize = Math.floor(preciseFontSize); // Rounded font size
+  const s = preciseFontSize / roundedSize; // Remaining scale
+  
+  textElement.style.fontSize = roundedSize + 'px';
+  const translate = 'translate(' + pos.x + 'px, ' + pos.y + 'px)';
+  const scale = 'translate(-50%, -50%) scale(' + s + ') translate(50%, 50%)';
+  textElement.style.transform = translate + scale;
+}
+
+function onMouseWheel(e) {
+  const delta = (e.wheelDelta && e.wheelDelta / 40) || -e.detail;
+  zoom = Math.max(MAX_ZOOM_OUT, zoom + (delta / 100))
+  e.preventDefault();
+  renderText();
+}
+
+document.addEventListener('mousewheel', onMouseWheel)
+document.addEventListener('DOMMouseScroll', onMouseWheel) // Firefox
+
+renderText();
+</script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+body {
+    margin: 0;
+}
+
+.text-annotation {
+  line-height: 1;
+  white-space: pre;
+  position: fixed;
+  overflow: hidden;
+  transform: translateZ(0); /* Optimization */
+}
