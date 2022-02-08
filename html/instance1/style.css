@@ -1,0 +1,26 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  box-sizing: border-box;
+  margin: 0rem 0rem 1rem 0rem;
+}
+
+div {
+  display: flex;
+  justify-content: space-evenly;
+}
+h1 {
+  padding: 0.5rem;
+  text-align: center;
+  background-color: rgb(59, 59, 59);
+  color: rgb(236, 236, 236);
+}
+img {
+  float: left;
+  padding-right: 20px;
+}
+a:link {
+  color: red;
+}
+li {
+  margin: 0rem;
+}
