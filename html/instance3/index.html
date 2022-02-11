@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .container {
+        margin: 0 auto;
+        background-color: grey;
+        padding: 2em 3em;
+        color: aliceblue;
+      }
+      .row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        /* align-items: center; */
+        align-content: center;
+        justify-content: space-between;
+      }
+      a {
+        background-color: aqua;
+        padding: 1em;
+        border-radius: 3px;
+        text-decoration: none;
+      }
+      .col3 {
+        margin-top: 1rem;
+      }
+      .booking-container {
+        max-width: 1200px;
+        margin: 3em auto;
+      }
+      .booking-row {
+        display: flex;
+      }
+      .booking-blurb {
+        margin: auto;
+        padding: 2em;
+      }
+      .blurb-container {
+        padding-bottom: 3em;
+      }
+      h1{
+          padding-bottom: .5em;
+      }
+
+      @media (max-width: 560px) {
+        .row{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        .booking-row{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .col1{
+            display: none;
+        }
+        .row > div {
+            padding-bottom: 1em;
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="container">
+        <div class="row">
+          <div class="col1">
+            <ul>
+              <li>Home</li>
+              <li>Artwork</li>
+              <li>Contact</li>
+            </ul>
+          </div>
+          <div class="col2">
+            <h3 class="middle">
+              <img
+                src="https://via.placeholder.com/90x45"
+                alt="business-logo"
+              />
+            </h3>
+          </div>
+          <div class="col3">
+            <a href="#">Arty - theArtist</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="booking-container">
+      <div class="booking-row">
+        <div class="booking-img">
+          <img src="https://via.placeholder.com/455" alt="booking-img" />
+        </div>
+        <div class="booking-blurb">
+          <div class="blurb-container">
+            <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione,
+              blanditiis quisquam autem unde dolore aut odio nesciunt porro
+              repellat accusantium quibusdam fuga reiciendis? Facilis, inventore
+              rem! Ea eveniet aliquam possimus.
+            </p>
+          </div>
+          <a class="cta-btn" href="#">book a mix</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
